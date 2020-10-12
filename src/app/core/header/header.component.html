@@ -1,7 +1,13 @@
 <section>
   <mat-toolbar color="primary" class="example-toolbar">
     <mat-toolbar-row>
-      <h1 class="example-app-name">{{ title }}</h1>
+      <h1 *ngIf="!medyaQueryParent.matches">{{ title }}</h1>
+
+      <span class="spacer-header"></span>
+
+      <div class="search-form">
+        <app-filter-search (sendSearchFilter)="searchFilter($event)"></app-filter-search>
+      </div>
 
       <span class="spacer-header"></span>
       <ng-container *ngTemplateOutlet="!medyaQueryParent.matches ? not_responsive : responsive">
@@ -26,9 +32,6 @@
   </button>
 </ng-template>
 
-
 <mat-menu #selectorCategories="matMenu" xPosition="after">
-  <button mat-menu-item disabled>Categorias</button>
-  <button mat-menu-item *ngFor="let category of categories" (click)="selectCategory(category)"
-    [ngClass]="{'active': category.isActive}">{{category.name}}</button>
+  <app-filter-categories [categories]="categories" (categoryCurrent)="selectCategoryCurrent($event)"></app-filter-categories>
 </mat-menu>

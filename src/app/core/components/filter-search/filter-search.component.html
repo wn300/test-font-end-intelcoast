@@ -1,0 +1,8 @@
+<form>
+  <mat-form-field class="search-full-width">
+    <mat-label>Buscar</mat-label>
+    <input type="text" matInput [(ngModel)]="searchFilter" [ngModelOptions]="{standalone: true}" maxlength="100"
+      placeholder="Ej: Personas">
+    <mat-icon matSuffix class="cursor-pointer" (click)="search()">search</mat-icon>
+  </mat-form-field>
+</form>

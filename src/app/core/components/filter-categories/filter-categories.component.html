@@ -1,0 +1,5 @@
+
+  <button mat-menu-item disabled>Categorias</button>
+  <button mat-menu-item *ngFor="let category of categories" (click)="selectCategory(category)"
+    [ngClass]="{'active': category.isActive}">{{category.name}}</button>
+

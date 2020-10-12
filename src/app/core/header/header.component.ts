@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   public categories: Categories[];
   public categoryCurrent: Categories;
 
+
   public title: string;
   constructor() {
     this.title = 'Suplos';
@@ -65,17 +66,11 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  selectCategory(category: any): void {
-    const selectionCurrent = this.categories.filter(data => data.isActive);
-    if (selectionCurrent.length > 0) {
-      selectionCurrent[0].isActive = false;
-    }
-    const selectionNew = this.categories.filter(data => data.value === category.value);
-    if (selectionNew.length > 0) {
-      selectionNew[0].isActive = true;
-    }
-
-    this.categoryCurrent = selectionNew[0];
+  searchFilter(filter: string): void {
+    console.log(filter);
   }
 
+  selectCategoryCurrent(filter: Categories): void {
+    this.categoryCurrent = filter;
+  }
 }
