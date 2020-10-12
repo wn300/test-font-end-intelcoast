@@ -14,6 +14,7 @@ import { FilterSearchComponent } from './components/filter-search/filter-search.
 
 @NgModule({
   declarations: [HeaderComponent, FilterCategoriesComponent, FilterSearchComponent],
+  exports: [HeaderComponent],
   imports: [
     CommonModule,
     FormsModule,

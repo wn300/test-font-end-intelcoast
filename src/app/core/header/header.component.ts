@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, Input, OnInit } from '@angular/core';
 import { Categories } from '../entity/header';
 
@@ -7,15 +8,22 @@ import { Categories } from '../entity/header';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() medyaQueryParent: MediaQueryList;
-
   public categories: Categories[];
   public categoryCurrent: Categories;
-
-
   public title: string;
-  constructor() {
+  public isSmallScreen: boolean;
+
+  constructor(breakpointObserver: BreakpointObserver) {
     this.title = 'Suplos';
+
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+
+    breakpointObserver.observe([
+      Breakpoints.HandsetLandscape,
+      Breakpoints.HandsetPortrait
+    ]).subscribe(result => {
+      this.isSmallScreen = result.matches;
+    });
 
     this.categoryCurrent = {
       name: 'Todas las categorias',

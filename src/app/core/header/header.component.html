@@ -1,7 +1,7 @@
 <section>
   <mat-toolbar color="primary" class="example-toolbar">
     <mat-toolbar-row>
-      <h1 *ngIf="!medyaQueryParent.matches">{{ title }}</h1>
+      <h1 *ngIf="!isSmallScreen">{{ title }}</h1>
 
       <span class="spacer-header"></span>
 
@@ -10,7 +10,7 @@
       </div>
 
       <span class="spacer-header"></span>
-      <ng-container *ngTemplateOutlet="!medyaQueryParent.matches ? not_responsive : responsive">
+      <ng-container *ngTemplateOutlet="!isSmallScreen ? not_responsive : responsive">
       </ng-container>
     </mat-toolbar-row>
   </mat-toolbar>
