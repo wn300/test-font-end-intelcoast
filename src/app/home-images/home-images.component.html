@@ -1,8 +1,9 @@
 <div class="row" *ngIf="!isLoading">
   <div class="col-12">
-    <h1>{{nameFilter}}</h1>
+    <h1 *ngIf="images.length > 0">{{nameFilter}}</h1>
+    <h1 *ngIf="images.length === 0">No se encontraron resultados para: {{nameFilter}}</h1>
   </div>
-  <div class="col-lg-3 col-12 col-md-4" *ngFor='let image of images'>
+  <div class="col-lg-3 col-12 col-md-4 mt-2" *ngFor='let image of images'>
     <mat-card class="container-card">
       <mat-card-header>
         <mat-card-title>Tipo de imagen:</mat-card-title>
@@ -21,5 +22,11 @@
         </div>
       </mat-card-actions>
     </mat-card>
+  </div>
+</div>
+
+<div class="row justify-content-center heigth-total" *ngIf="isLoading">
+  <div class="col-lg-2 col-md-3 col-4 align-self-center">
+      <mat-spinner [diameter]="80" mode="indeterminate"></mat-spinner>
   </div>
 </div>

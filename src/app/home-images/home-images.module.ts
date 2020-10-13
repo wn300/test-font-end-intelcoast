@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { HomeImagesRoutingModule } from './home-images-routing.module';
 import { HomeImagesService } from './services/home-images.service';
@@ -32,6 +33,7 @@ import { ModalImageComponent } from './components/modal-image/modal-image.compon
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
     StoreModule.forFeature('imageObject', imageRootReducer),
     EffectsModule.forFeature(EffectsHomeImages)
   ]

@@ -1,27 +1,35 @@
 # TestFrontEndSuplos
+## Tecnologia de construcción
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+Este proyecto fue generado con:
 
-## Development server
+- [Angular CLI](https://github.com/angular/angular-cli) versión 10.1.6.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Patrón Redux](https://ngrx.io/) versión 10.0.1 manteniendo el estado de la aplicación
+
+- [Bootstrap 4](https://getbootstrap.com/) versión 4.5.0 para el Grid System
+
+- [Angular Material](https://material.angular.io/) versión 10.2.4 para mantener el diseño de la aplicación
+
+- [Compodoc](https://compodoc.app/) versión 1.1.11 para documentar toda la aplicación
+
+## Instalación
+
+Ejecute `npm install` y asegurese de que se instalen las dependencias en su totalidad.
+
+## Servidor de Desarrollo
+
+Ejecute `ng serve` o `ng serve -o` para arrancar el servidor de desarrollo. Navegue a la direccion `http://localhost:4200/`. Y aumaticamente la aplicación comenzara a ejecutarse.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecute `ng generate component component-name` par generar un nuevo componente. Puede usar tambien `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ejecute `ng build` para construir el poryecto. La construccion del proyecto quedara guardad en la raiz del proyecto en el archivo `dist/`. Use `--prod` para deslegar en ambiente de producción.
 
-## Running unit tests
+## Documentación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecute `npm run compodoc:start` para arrancar la ddocumentación de manera locar. Navegue a la direccion `http://127.0.0.1:8080/index.html`. Y aumaticamente la documentación comenzara a ejecutarse.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

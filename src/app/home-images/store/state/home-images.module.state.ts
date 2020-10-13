@@ -1,9 +1,15 @@
 import { ImageState } from './images.state';
 import { uiImageModuleState } from './ui/ui-image-module.state';
 
+/**
+ * Constante de nombre del stado para cuando es invocada
+ */
 export const ImageFeatureName = 'ImagesModuleState';
 
-export type ProdctsModuleState = Readonly<{
+/**
+ * Estado general del modulo de imagenes
+ */
+export type ImageModuleState = Readonly<{
   imageObject: ImageState;
   ui: uiImageModuleState;
 }>;

@@ -7,6 +7,9 @@ import {
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
+/**
+ * constante que prepara la instanccia paa realizar pruebas unitarias
+ */
 declare const require: {
   context(path: string, deep?: boolean, filter?: RegExp): {
     keys(): string[];
@@ -14,12 +17,17 @@ declare const require: {
   };
 };
 
-// First, initialize the Angular testing environment.
+/**
+ * inicializando en ambiete de pruebas de angular
+ */
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting()
 );
-// Then we find all the tests.
+
+/**
+ * busca todos os test
+ */
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);
