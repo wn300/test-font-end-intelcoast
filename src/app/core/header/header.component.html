@@ -6,7 +6,7 @@
       <span class="spacer-header"></span>
 
       <div class="search-form">
-        <app-filter-search (sendSearchFilter)="searchFilter($event)"></app-filter-search>
+        <app-filter-search [searchFilter]="searchFilterParent" (sendSearchFilter)="searchFilter($event)"></app-filter-search>
       </div>
 
       <span class="spacer-header"></span>

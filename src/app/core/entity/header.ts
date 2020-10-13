@@ -1,8 +1,8 @@
 export interface Header {
-  categories: Categories[];
+  category: Category;
 }
 
-export interface Categories {
+export interface Category {
   name: string;
   value: string;
   isActive: boolean;

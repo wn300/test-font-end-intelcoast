@@ -1,0 +1,25 @@
+<div class="row" *ngIf="!isLoading">
+  <div class="col-12">
+    <h1>{{nameFilter}}</h1>
+  </div>
+  <div class="col-lg-3 col-12 col-md-4" *ngFor='let image of images'>
+    <mat-card class="container-card">
+      <mat-card-header>
+        <mat-card-title>Tipo de imagen:</mat-card-title>
+        <mat-card-subtitle>{{image.type}}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="container-img-card mt-2">
+        <img mat-card-image class="image-card" [src]="image.largeImageURL" alt="Photo of a Shiba Inu">
+      </div>
+      <mat-card-actions>
+        <div class="mat-flex-container">
+          <div class="mat-button-container">
+            <button mat-raised-button mat-mini-fab color="accent" (click)="openDialog(image)">
+              <mat-icon>settings_overscan</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

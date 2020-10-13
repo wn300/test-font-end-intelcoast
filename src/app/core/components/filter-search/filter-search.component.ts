@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-search',
@@ -7,8 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class FilterSearchComponent implements OnInit {
   @Output() sendSearchFilter: EventEmitter<string> = new EventEmitter<string>();
-
-  public searchFilter: string;
+  @Input() searchFilter: string;
 
   constructor() { }
 
