@@ -27,9 +27,9 @@ Ejecute `ng generate component component-name` par generar un nuevo componente. 
 
 ## Build
 
-Ejecute `ng build` para construir el poryecto. La construccion del proyecto quedara guardad en la raiz del proyecto en el archivo `dist/`. Use `--prod` para deslegar en ambiente de producción.
+Ejecute `ng build` para construir el poryecto. La construcción del proyecto quedara guardad en la raiz del proyecto en el archivo `dist/`. Use `--prod` para deslegar en ambiente de producción.
 
 ## Documentación
 
-Ejecute `npm run compodoc:start` para arrancar la ddocumentación de manera locar. Navegue a la direccion `http://127.0.0.1:8080/index.html`. Y aumaticamente la documentación comenzara a ejecutarse.
+Ejecute `npm run compodoc:start` para arrancar la documentación de manera locar. Navegue a la direccion `http://127.0.0.1:8080/index.html`. Y aumaticamente la documentación comenzara a ejecutarse.
 
