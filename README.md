@@ -33,7 +33,7 @@ Ejecute `ng build` para construir el poryecto. La construcción del proyecto que
 
 Ejecute `npm run compodoc:start` para arrancar la documentación de manera locar. Navegue a la direccion `http://127.0.0.1:8080/index.html`. Y aumaticamente la documentación comenzara a ejecutarse.
 
-## REDUX
+## Redux
 
 Para visualizar el store de la aplicación es neceario ejecutarla en Googe Chrome é instalar la siguiente [extensión](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es),
 solo le sera util en ambiente desarrollo, en producción no se encuentra habilitada la ejecucion del Dev Tools de REDUX. 
